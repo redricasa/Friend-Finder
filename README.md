@@ -14,4 +14,4 @@ I used Ok Cupid's most answered quesitions to get the 10 survey questions. <http
  - JavaScript
  - HTML
  ## Next Steps
-> make the CSS of the web page more unique
+> make the CSS of the web page more unique since both the home.html and survey.html syntax/code was copied from a demo app
