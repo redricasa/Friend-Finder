@@ -15,6 +15,7 @@ I used Ok Cupid's most answered quesitions to get the 10 survey questions. <http
   - express
   - nodemon
   - path
+  - heroku
  - JavaScript
  - HTML
  ## Next Steps
