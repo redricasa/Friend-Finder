@@ -1,4 +1,4 @@
-#photo, #name {
+.form-control {
     content:"*";
     color:red;
 }
