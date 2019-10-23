@@ -4,3 +4,11 @@
 //TO DO
 // A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
 //TO DO
+
+var friends = require("../data/friends.js");
+
+module.exports = function(app){
+    app.get("/api/friends", function(request, response){
+        response.json(friends);
+    });
+}

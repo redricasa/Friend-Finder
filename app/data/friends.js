@@ -1,4 +1,4 @@
-var acquaintances = [
+var friends = [
     {
         name: "Monica",
         photo: "../photoes/abebe.png",
