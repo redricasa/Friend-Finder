@@ -64,3 +64,5 @@ var friends = [
         ]
     }
 ]
+//export the array of objects to be required as a JSON in the apiRoutes.js
+module.exports = friends
