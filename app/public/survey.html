@@ -36,7 +36,7 @@
     <form>
       <div class="form-group">
         <h3><strong>Question 1</strong></h3>
-        <label for="sel1"><h3>You're afraid of death.</h3></label>
+        <label for="q1"><h3>You're afraid of death.</h3></label>
         <select class="form-control" id="q1">
           <option value="1">1 - Strongly Agree</option>
           <option value="2">2 - Agree </option>
@@ -46,7 +46,7 @@
         </select>
         <br>
         <h3><strong>Question 2</strong></h3>
-        <label for="sel1">You're the type of person to tell a homeless person to get a job.</label>
+        <label for="q2">You're the type of person to tell a homeless person to get a job.</label>
         <select class="form-control" id="q2">
           <option value="1">1 - Strongly Agree</option>
           <option value="2">2 - Agree </option>
@@ -56,7 +56,7 @@
         </select>
         <br>
         <h3><strong>Question 3</strong></h3>
-        <label for="sel1">Astrological signs are important in a match.</label>
+        <label for="q3">Astrological signs are important in a match.</label>
         <select class="form-control" id="q3">
           <option value="1">1 - Strongly Agree</option>
           <option value="2">2 - Agree </option>
@@ -66,7 +66,7 @@
         </select>
         <br>
         <h3><strong>Question 4</strong></h3>
-        <label for="sel1">I think about carbohydrates a lot.</label>
+        <label for="q4">I think about carbohydrates a lot.</label>
         <select class="form-control" id="q4">
           <option value="1">1 - Strongly Agree</option>
           <option value="2">2 - Agree </option>
@@ -76,7 +76,7 @@
         </select>
         <br>
         <h3><strong>Question 5</strong></h3>
-        <label for="sel1">The government should require all children be vaccinated for preventable diseases.</label>
+        <label for="q5">The government should require all children be vaccinated for preventable diseases.</label>
         <select class="form-control" id="q5">
           <option value="1">1 - Strongly Agree</option>
           <option value="2">2 - Agree </option>
@@ -86,7 +86,7 @@
         </select>
         <br>
         <h3><strong>Question 6</strong></h3>
-        <label for="sel1">You feel obligated to help a fellow human being.</label>
+        <label for="q6">You feel obligated to help a fellow human being.</label>
         <select class="form-control" id="q6">
           <option value="1">1 - Strongly Agree</option>
           <option value="2">2 - Agree </option>
@@ -96,7 +96,7 @@
         </select>
         <br>
         <h3><strong>Question 7</strong></h3>
-        <label for="sel1">Interacial marriage is a bad idea.</label>
+        <label for="q7">Interacial marriage is a bad idea.</label>
         <select class="form-control" id="q7">
           <option value="1">1 - Strongly Agree</option>
           <option value="2">2 - Agree </option>
@@ -106,7 +106,7 @@
         </select>
         <br>
         <h3><strong>Question 8</strong></h3>
-        <label for="sel1">Immigrants should be required to learn the official language of the country they're living in.</label>
+        <label for="q8">Immigrants should be required to learn the official language of the country they're living in.</label>
         <select class="form-control" id="q8">
           <option value="1">1 - Strongly Agree</option>
           <option value="2">2 - Agree </option>
@@ -116,7 +116,7 @@
         </select>
         <br>
         <h3><strong>Question 9</strong></h3>
-        <label for="sel1">I'd date someone who keeps a gun in their home.</label>
+        <label for="q9">I'd date someone who keeps a gun in their home.</label>
         <select class="form-control" id="q9">
           <option value="1">1 - Strongly Agree</option>
           <option value="2">2 - Agree </option>
@@ -126,7 +126,7 @@
         </select>
         <br>
         <h3><strong>Question 10</strong></h3>
-        <label for="sel1">Duty to my faith/religion/god(s) is the most important thing in my life.</label>
+        <label for="q10">Duty to my faith/religion/god(s) is the most important thing in my life.</label>
         <select class="form-control" id="q10">
           <option value="1">1 - Strongly Agree</option>
           <option value="2">2 - Agree </option>
@@ -147,7 +147,30 @@
           <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/redricasa/Friend-Finder">GitHub Repo</a></p>
         </div>
       </footer>
-  
+      <script type="text/javascript">
+        if (validateForm()){
+          var userData = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val(),
+            scores: [
+              $("#q1").val(),
+              $("#q2").val(),
+              $("#q3").val(),
+              $("#q4").val(),
+              $("#q5").val(),
+              $("#q6").val(),
+              $("#q7").val(),
+              $("#q8").val(),
+              $("#q9").val(),
+              $("#q10").val()
+            ]
+          }
+        };
+        var currentURL = window.location.origin;
+        $.post(currentURL = "/api/friends", userData, function(data){
+          alert("working")
+        });
+      </script>
   </div>
 </body>
 </html>
