@@ -198,15 +198,18 @@
           ]
         }
       }
-    })
-    var currentURL = window.location.origin;
+      var currentURL = window.location.origin;
     $.post(currentURL = "/api/friends", userData, function(data){
       //dynamically adds the names and images of friends to modal depending on match
       $("#matchName").text(data.name);
-      $("#matchName").attr("src", data.photo);
+      $("#matchImg").attr("src", "../photoes/jacobs.png");
+      var photopls = "<img src="+data.photo+"/>";
+      $("#matchName").append(photopls)
       $("#resultModal").modal("toggle");
       alert("working")
     });
+    })
+   
   </script>
   
 </body>
