@@ -1,7 +1,7 @@
 var friends = [
     {
         name: "Monica",
-        photo: "../photoes/abebe.png",
+        photo: "/photoes/monica.png",
         scores: [
             "5",
             "5",
@@ -17,7 +17,7 @@ var friends = [
     },
     {
         name: "Apne-he",
-        photo: "../photoes/apnehe.png",
+        photo: "/photoes/apnehe.png",
         scores: [
             "2",
             "1",
@@ -33,7 +33,7 @@ var friends = [
     },
     {
         name: "Abebe",
-        photo: "../photoes/abebe.png",
+        photo: "/photoes/abebe.png",
         scores: [
             "2",
             "2",
@@ -49,7 +49,7 @@ var friends = [
     },
     {
         name: "Jacobs",
-        photo: "../photoes/jacobs.png",
+        photo: "/photoes/jacobs.png",
         scores: [
             "2",
             "1",

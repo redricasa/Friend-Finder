@@ -13,7 +13,7 @@ app.use(bodyParser.text({ type: 'text/html' }))
 require("./app/routing/apiRoutes.js")(app)
 require("./app/routing/htmlRoutes.js")(app)
 //creates a route that serves the photoes
-app.use('/photoes', express.static(path.join(__dirname, 'app/photoes')))
+app.use( express.static( "photoes"));
 
 app.listen(PORT, function(){
     console.log("app listening on port: " + PORT)
