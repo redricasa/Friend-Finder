@@ -157,7 +157,7 @@
           </div>
           <div class="modal-body">
            <h2 id="matchName"></h2>
-           <img id="matchImg" src="0000000" >
+           <img id="matchImg" src="" >
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -202,11 +202,8 @@
     $.post(currentURL = "/api/friends", userData, function(data){
       //dynamically adds the names and images of friends to modal depending on match
       $("#matchName").text(data.name);
-      $("#matchImg").attr("src", "../photoes/jacobs.png");
-      var photopls = "<img src="+data.photo+"/>";
-      $("#matchName").append(photopls)
+      $("#matchImg").attr("src", data.photo);
       $("#resultModal").modal("toggle");
-      
     });
     })
    
